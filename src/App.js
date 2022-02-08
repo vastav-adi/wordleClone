@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import './Assets/App.css';
+import './Assets/bootstrap.min.css'
+import { useEffect, useState } from 'react'
+import GridComponent from './Components/Grid/GridComponent';
+import KeyboardComponent from './Components/KeyboardComponent';
 
-function App() {
+const App = () => {
+  const [key, setKey] = useState([]);
+  const [gameOver, setGameOver] = useState(false);
+
+
+  useEffect(()=>{
+    if(gameOver){
+      console.log("game over bitches");
+    }
+  },[gameOver])
+
+  const gameConditionCallback = () =>{
+    setGameOver(true)
+  }
+
+  const dataBindCallback = (e) => {
+    let arr = [];
+    arr.push(e.target.value)
+    setKey(arr)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='body'>
+      <div className='game-container'>
+        <div className='game-header'>
+          <div>
+            WORDLE
+          </div>
+        </div>
+        <div className='game-body'>
+          <GridComponent input={key} callback={gameConditionCallback} gameOver={gameOver}/>
+        </div>
+        <div className='game-keyboard'>
+          <KeyboardComponent callBackFunction={dataBindCallback} />
+        </div>
+
+      </div>
     </div>
   );
 }

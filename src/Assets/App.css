@@ -1,0 +1,132 @@
+:root {
+  --color-tone-1: #d7dadc;
+  --color-tone-2: #818384;
+  --color-tone-3: #565758;
+  --color-tone-4: #3a3a3c;
+  --color-tone-5: #272729;
+  --color-tone-6: #1a1a1b;
+  --color-tone-7: #121213;
+  --opacity-50: rgba(0, 0, 0, 0.5);
+  --tile-side: 8.5vh;
+  --present: #b59f3b;
+  --exact: #538d4e;
+}
+
+.body{
+  margin: 0;
+  padding: 0 2vw;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  background-color: var(--color-tone-7);
+  color: var(--color-tone-1);
+}
+
+.game-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: fit-content;
+  min-width: 500px;
+}
+
+.game-header{
+  height: 5%;
+  min-height: 51px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 0.1px solid var(--color-tone-4);
+  font-size: 210%;
+  font-weight: bolder;
+}
+
+.game-body{
+  height: 70%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center
+}
+.game-keyboard{
+  justify-content: end;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: center
+}
+
+.gridbody-wrapper{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  justify-content: center;
+}
+
+.message-block{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.board{
+  display: flex;
+  flex-direction: column;
+}
+
+.tile{
+  height: var(--tile-side);
+  width: var(--tile-side);
+  /* margin: 0 auto; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.tile.default{
+  border: 2px solid var(--color-tone-4);
+}
+
+.tile.present{
+  background-color: var(--present);
+  border: 1px solid var(--present);
+}
+
+.tile.exact{
+  background-color: var(--exact);
+  border: 1px solid var(--exact);
+}
+
+.tile.absent{
+  background-color: var(--color-tone-3);
+  border: 1px solid var(--color-tone-3);
+}
+
+.keyboard{
+  min-width: inherit;
+}
+
+.btn-default{
+  padding: 1rem;
+  border: none;
+  min-width: 2.5rem;
+  min-height: 3.7rem;
+  border-radius: 4px;
+  background-color: var(--color-tone-2);
+  color: var(--color-tone-1);
+}
+.btn-wide{
+  min-width: 3rem !important;
+}
