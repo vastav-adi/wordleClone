@@ -2,7 +2,12 @@
 
 I made this app using React.
 
-No backend required for now, simply using git clone should be enough to run this app.
+No backend required for now, 
+simply,
+> GIT CLONE
+> NPM INTALL
+> NPM START
+that should be enough to run this app.
 Maybe in the future I will try and mess around with backend.
 
 Thanks
